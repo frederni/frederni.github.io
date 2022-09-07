@@ -26,14 +26,14 @@
     <header class="text-center text-white bg-primary masthead">
         <div class="container"><img class="rounded-circle img-fluid d-block mx-auto mb-5" src="assets/img/cartoon-FrederickNilsen.jpg" width="302" height="278">
             <h1>Frederick Nilsen</h1>
-            <hr class="star-light">
+            <hr class="star-light" style="content: '';">
             <h2 class="font-weight-light mb-0">Statistician | Data analyst | AI Engineer</h2>
         </div>
     </header>
     <section id="portfolio" class="portfolio">
         <div class="container">
             <h2 class="text-uppercase text-center text-secondary">Portfolio</h2>
-            <hr class="star-dark mb-5">
+            <hr class="star-dark mb-5" style="content: '';">
             <div class="row">
                 <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-1" data-bs-toggle="modal">
                         <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
@@ -48,7 +48,7 @@
                 <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-3" data-bs-toggle="modal">
                         <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
                             <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="fa fa-search-plus fa-3x"></i></div>
-                        </div><img class="img-fluid" src="assets/img/portfolio/circus.png">
+                        </div><img class="img-fluid" src="assets/img/portfolio/hamiltonian.png">
                     </a></div>
                 <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-4" data-bs-toggle="modal"></a></div>
                 <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-5" data-bs-toggle="modal"></a></div>
@@ -59,7 +59,7 @@
     <section class="text-white bg-primary mb-0" id="about">
         <div class="container">
             <h2 class="text-uppercase text-center text-white">About</h2>
-            <hr class="star-light mb-5">
+            <hr class="mb-5">
             <div class="row">
                 <div class="col-lg-4 ms-auto">
                     <p class="lead">Hey there, thanks for checking out my little portfolio! My name's Frederick, and I've been studying industrial mathematics at the Norwegian University of Science and Technology (NTNU) for the past 4 years.</p>
@@ -68,7 +68,7 @@
                     <p class="lead">This website is a collection of some of the projects I've touched into, both study-related but also from leisure. All my work is also available from my Github-account if you prefer to check it out that way.</p>
                 </div>
             </div>
-            <div class="text-center mt-4"><a class="btn btn-outline-light btn-xl" role="button" href="#"><i class="fa fa-github me-2"></i><span>Visit Github profile</span></a></div>
+            <div class="text-center mt-4"><a class="btn btn-outline-light btn-xl" role="button" href="https://github.com/frederni/" target="_blank"><i class="fa fa-github me-2"></i><span>Visit Github profile</span></a></div>
         </div>
     </section>
     <section id="contact">
@@ -79,7 +79,7 @@
                         <div class="card mb-5">
                             <div class="card-body p-sm-5">
                                 <h2 class="text-center mb-4">Contact me</h2>
-                                <form>
+                                <form data-bss-recipient="676741c7537fcc1e89d0ef7297605a13" data-bss-redirect-url="#contact">
                                     <div class="mb-3"><input class="form-control" type="text" id="name-2" name="name" placeholder="Name"></div>
                                     <div class="mb-3"><input class="form-control" type="email" id="email-2" name="email" placeholder="Email"></div>
                                     <div class="mb-3"><textarea class="form-control" id="message-2" name="message" rows="6" placeholder="Message"></textarea></div>
@@ -116,7 +116,7 @@
         </div>
     </footer>
     <div class="text-center text-white copyright py-4">
-        <div class="container"><small>Copyright © Except I don't have copyright for this lol 2022</small></div>
+        <div class="container"><small>Made by Frederick Nilsen 2022 • Made using Bootstrap Studio&nbsp;• <a href="https://startbootstrap.com/theme/freelancer" target="_blank"><span style="color: rgb(255, 255, 255);">Freelancer theme</span></a><span style="color: rgb(255, 255, 255);">&nbsp;&nbsp;</span></small></div>
     </div>
     <div class="d-lg-none scroll-to-top position-fixed rounded"><a class="text-center d-block rounded text-white" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
     <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-1">
@@ -153,7 +153,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" data-bs-dismiss="modal" href="https://github.com/frederni/TMA4300-CompStat"><i class="fa fa-external-link"></i>Check out Github repository</a><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" data-bs-dismiss="modal"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
+                <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill" role="button" href="https://github.com/frederni/TMA4300-CompStat" target="_blank"><i class="fa fa-external-link"></i>Check out Github repository</a><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" data-bs-dismiss="modal"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
             </div>
         </div>
     </div>
@@ -166,13 +166,13 @@
                         <div class="row">
                             <div class="col-lg-8 mx-auto">
                                 <h2 class="text-uppercase text-secondary mb-0">estimating hamiltonial energies using neural networks and numerical optimizers</h2>
-                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/circus.png">
+                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="assets/img/portfolio/hamiltonian.png">
                                 <p class="mb-5">A project in the course of numerical mathematics, where we first implement an algorithm with a combination of Adam-optimizer and SGD to produce a function whose gradient is computed. Using numerical integrators such as Symplectic Euler, we can compute properies like the total energy of an unknown hamiltonial system.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" data-bs-dismiss="modal" href="https://github.com/frederni/TMA4215-NumMat/tree/master/Project%202"><i class="fa fa-external-link"></i>&nbsp;Github repository</a><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" data-bs-dismiss="modal" href="https://nbviewer.org/github/frederni/TMA4215-NumMat/blob/master/Project%202/Project%202.ipynb"><i class="fa fa-external-link"></i>&nbsp;Read notebook online</a><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" data-bs-dismiss="modal"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
+                <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill" role="button" href="https://github.com/frederni/TMA4215-NumMat/tree/master/Project%202" target="_blank"><i class="fa fa-external-link"></i>&nbsp;Github repository</a><a class="btn btn-primary btn-lg mx-auto rounded-pill" role="button" href="https://nbviewer.org/github/frederni/TMA4215-NumMat/blob/master/Project%202/Project%202.ipynb" target="_blank"><i class="fa fa-external-link"></i>&nbsp;Read notebook online</a><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" data-bs-dismiss="modal"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
             </div>
         </div>
     </div>
