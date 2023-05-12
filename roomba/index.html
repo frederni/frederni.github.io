@@ -1,0 +1,115 @@
+<!doctype html>
+<!--
+TODO: Expand lib of mp3 and vids, change rand int generator accordingly
+-->
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>Cat on a Roomba</title>
+      <style>
+      @font-face {
+        font-family: Graphik Semibold;
+        src: url(/src/Graphik-Semibold.otf);
+        }
+      @@font-face {
+        font-family: Graphik Regular;
+        src: url(/src/Graphik-Regular.otf);
+      }
+        body{
+          background-color: black;
+        }
+        .fullscreen-bg {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: -100;
+        }
+
+        #video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+        #header{
+          color: red;
+          font-family: 'Graphik Semibold', sans-serif;
+          font-size: 200%;
+          text-align: center;
+          margin-top: 20%;
+        }
+        #btn{
+          width: 100%;
+          height: 100%;
+        }
+        img{
+          max-width: 20%;
+          max-height: 20%;
+          opacity: 0.5;
+          transition: 0.3s;
+        }
+        img:hover{
+          opacity: 1.0;
+        }
+        #creds{
+          text-align: center;
+          background-color: rgba(0,0,0,0.5);
+          color: white;
+          margin: 0%;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          font-family: 'Graphik Regular', sans-serif;
+        }
+        a{
+          text-decoration: none;
+          color: inherit;
+
+        }
+      </style>
+
+
+    </head>
+    <body>
+      <div class="fullscreen-bg">
+        <video autoplay muted loop id="video">
+        </video>
+        <audio autoplay id="music"></audio>
+      </div>
+      <div id="creds">&copy; 2018 <a href="mailto:frederick.nilsen@gmail.com">Frederick Nilsen</a>.</div>
+          <div id="header">Give me another</div>
+          <div id="btn" align="center">
+            <a href="javascript:window.location.reload();">
+              <img src="src/btn.png" />
+            </a>
+          </div>
+
+
+
+
+      <script>
+          // Defining function for random int given min and max int input
+          function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) ) + min;
+          };
+          // Selects random int for video value
+          var video = document.getElementById("video");
+          var tempvar = getRndInteger(1,4);
+          video.setAttribute('src', 'vid/' + tempvar + '.webm');
+          video.load();
+
+          // Selects random int for music
+          var music = document.getElementById("music");
+          var tempmusic = getRndInteger(1,4);
+          //alert("video ID is " + tempvar + " and music ID is " + tempmusic);
+          music.setAttribute('src', 'mp3/' + tempmusic + '.mp3');
+          music.load();
+      </script>
+
+    </body>
+</html>

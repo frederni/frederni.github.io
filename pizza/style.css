@@ -1,0 +1,136 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+.content{
+	color: #333;
+}
+
+
+
+p,a,h1,h2,h3,body {
+    font-family: sans-serif;
+    color: #FFF;
+}
+body {
+    background-color: #DA2115;
+    padding: 25px;
+}
+h1 {
+    text-align: center;
+    margin: 0 0 20px 0;
+    font-size: 2.6em;
+}
+#personer {
+    display: inline-block;
+    width: 291px;
+    padding: 5px 0 5px 15px;
+    font-size: 2em;
+}
+select {
+    display: block;
+    width: 310px;
+    padding: 5px 0 5px 15px;
+    font-size: 2em;
+    margin-top: 8px;
+}
+#submit {
+    display: block;
+    width: 310px;
+    padding: 5px;
+    font-size: 2em;
+    margin-top: 8px;
+}
+.pizzas {
+    font-size: 5em;
+    text-align: center;
+    margin: 15px 0 0 0;
+}
+.pizza {
+    width: 80px;
+    padding: 5px;
+}
+.lowerPizza {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0 0 1em 0;
+    display: none;
+}
+.wrapper {
+    width: 300px;
+    margin: 0 auto;
+}
+section {
+	text-align: center;
+}
+section a {
+	margin: 0 0.5em;
+}
+@media only screen and (max-device-width : 480px){
+    select, #submit {
+        width: 100%;
+    }
+    #personer {
+        width: 93.5%;
+    }
+	.lowerPizza {
+		margin: 0 0 1em 0;
+	}
+	section a {
+		padding: 1em 0;
+		margin: 0 0;
+		display: block;
+	}
+}

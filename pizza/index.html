@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pizzakalkulator</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            function calc(){
+                var persons = document.getElementById("personer").value;
+                var need = document.getElementById("sult").value;
+				let restpizza = 0;
+				if(need == "rest"){
+					need = 1.4;
+					restpizza = 1;
+				}
+                var pizzas = Math.ceil((persons-1) * need * 2.5 / 8) + restpizza; 
+                document.getElementById("pizzas").innerHTML = pizzas;
+                if(pizzas > 100) {
+                    alert("Skal du virkelig kjøpe over 100 pizzaer?");
+                }
+                document.getElementsByClassName("lowerPizza")[0].style.display = "block";
+            }
+        </script>
+		
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css" integrity="sha384-ZPe7yZ91iWxYumsBEOn7ieg8q/o+qh/hQpSaPow8T6BwALcXSCS6C6fSRPIAnTQs" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js" integrity="sha384-ljao5I1l+8KYFXG7LNEA7DyaFvuvSCmedUf6Y6JI7LJqiu8q5dEivP2nDdFH31V4" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    </head>
+    <body>
+
+        <h1>Pizzakalkulator <span style="font-size: 13pt; font-weight:normal;"><a href="#popup1" align="center">[ℹ] Hæ?</a></span></h1> 
+        <form method="post">
+            <div class="wrapper">
+                <input type="number" placeholder="Antall personer" min="0" max="250" name="personer" id="personer" onchange="calc()">
+                <select id="sult" name="sult" onchange="calc()">
+                    <option value="1.0">Småsulten</option>
+                    <option value="1.2">Sulten</option>
+                    <option value="1.4">Kjempesulten</option>
+					<option value="rest">Kjempesulten med rester</option>
+                </select>
+                <p id="pizzas" class="pizzas"></p>
+                <p class="lowerPizza">pizzaer</p>
+            </div>
+        </form>
+        
+        <section>
+			<a href="https://www.pizzabakeren.no/menu.php">Pizzabakeren</a>
+			<a href="https://www.peppes.no/desktop/meny/pizza-meny">Peppes Pizza</a>
+			<a href="https://www.dominos.no/">Domino's</a>
+        </section>
+		<br />
+		<footer align="center">Stjålet fra <a href="https://www.fpu.no/common/pizza/">FpU</a>. Med &#10084; fra SU</footer>
+		
+
+		<div id="popup1" class="overlay">
+			<div class="popup">
+				<h2>Hvordan beregnes antall pizzaer?</h2>
+				<a class="close" href="#">&times;</a>
+				<div class="content">
+					Vi antar hver pizza har 8 stykker. Som småsulten spiser man gjennomsnittlig 2.5 pizzastykker, som sulten 3 stykker og som kjempesulten 3.5 stykker hver. Hvis man i tillegg vil ha rester beregnes én ekstra pizza på uttrykket. Antall pizzaer blir dermed
+					$$
+					\text{pizzas} = \left\lceil (P-1) \frac{H}{8} \right\rceil+ I(R),
+					$$
+					der \(P\) er antall som skal ha pizza, \(H\) er hunger-parameter, \(H \in \{2.5, 3, 3.5\}\), og der \(I(R)\) er indikatorfunksjonen for å ha rester, dvs. 1 hvis man ønsker rester og 0 ellers.
+				</div>
+			</div>
+		</div>
+    
+    </body>
+</html>
