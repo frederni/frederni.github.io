@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>FysmatHub.com</title>
+	<meta charset="utf-8" />
+
+	<!--yui-->
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.2.0/build/reset/reset-min.css" />
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.2.0/build/fonts/fonts-min.css" />
+
+
+<style type="text/css">
+body {
+	background-color: #000000;
+	margin: 0 20px 0 20px;
+}
+
+.align-center {
+	text-align: center;
+}
+
+#container {
+	width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logo {
+	margin: 50px 0 30px 0;
+}
+
+#warning {
+	font-size: 197%;
+	color: #606060;
+}
+
+#warning2 {
+	margin: 20px 0 0 0;
+	font-size: 136%;
+	color: #606060;
+}
+
+#warning3 {
+	margin: 50px 0 0 0;
+	font-size: 114%;
+	color: #606060;
+}
+
+#choices {
+	margin: 50px 0 0 0;
+	color: #606060;
+}
+
+.hey {
+	font: 180% arial;
+}
+.marg {
+	margin: 0 30px 0 30px;
+}
+
+.pad {
+	height:100px;
+}
+
+#choices input {
+	font: 136% arial;
+	width: 150px;
+}
+
+#problematic {
+	font-weight: bold;
+}
+a{text-decoration: none;}
+a:hover{text-decoration:underline;}
+
+a:visited {
+	color: #606060;
+}
+</style>
+
+
+
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="logo" class="align-center">
+	<img src="youkok_logo.png" width="329" height="86" alt="logo" />
+</div>
+
+<div id="warning" class="align-center">
+	WARNING: This website contains explicit STUDENT material.
+</div>
+
+<div id="warning2" class="align-center">
+You may only enter this Website if you are at most
+30 years of age, don't work for NTNU and you can complete the sentence below. If you do not
+meet these requirements, then you do not have permission to use the Website.
+</div>
+	<script type="text/javascript">
+	<!--
+	function toUpper() {
+		var s = document.getElementById('pw').value;
+		s = s.toUpperCase();
+		document.getElementById('pw').value = s;
+	}
+	// -->
+	</script>
+<div id="choices" class="align-center">
+
+			<span class="hey">"TEKFYS ER... </span><input id="pw" type="text" onkeyup="toUpper()" autocomplete="off"><span class="hey">!!"</span>
+		<br /><br /><br /><br />
+
+		<button id="enterbutton" onclick="enter()">Sha-la-la-la-la!</button> 
+		<!--<span class="marg"></span><input type="submit" onclick="location.href='http://moviie.com'; return false;" id="leave" name="user_choice" value="H&aelig;!?" />-->
+		<div id="warning3" class="align-center">
+		<strong id="problematic"></strong>
+		</div>
+</div>
+
+<script>
+
+var inp = document.getElementById('pw');
+inp.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("enterbutton").click();
+  }
+});
+
+
+function enter(){
+let pwd = document.getElementById('pw').value;
+
+let target = 'ARBEIDSLØSE';
+let decoy = ['TEIT', 'DUM', 'SNILL', 'GOD', 'WOW','HETERO'];
+
+if(pwd == 'HOMO'){
+	document.getElementById("problematic").innerHTML = "Nei hva faen, så sykt problematisk...";
+}
+if(pwd == target){
+location.replace("kok");
+}
+
+
+}
+
+
+</script>
+
+<div id="warning3" class="align-center">
+	Please mail <span id="support_email_field">noone@yomama.tk</span> if you are having problems with the site. | Design kokt fra <a href="http://youkok.com" id="lnk">youkok.com</a>.
+</div>
+
+
+</div>
+</body>
+</html>

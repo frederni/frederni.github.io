@@ -1,0 +1,1 @@
+Dette er bare en proof of concept og inneholder ikke faktisk kok (lengre) ;)
