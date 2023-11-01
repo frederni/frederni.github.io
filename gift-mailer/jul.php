@@ -14,9 +14,9 @@ $message = 'Time to vipps! Dette er julegaven.';
 
 //$headers[] = ‘MIME-Version: 1.0’;
 //$headers[] = ‘Content-type: text/html; charset=iso-8859-1’;
-$headers = "From: frederni@itea.ntnu.no";
+$headers = "From: frederick.nilsen@gmail.com";
 
-mail("your_mail@example.com","X har scanna koden.",$message,$headers);
+mail("frederick.nilsen@gmail.com","Kode er scannet.",$message,$headers);
 ?>
 <h1>God jul, X!</h1>
 <p>Du har "vunnet" penger for <strong>tiltak</strong> på en verdi av N kr!</p>
