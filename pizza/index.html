@@ -65,7 +65,7 @@
 				<div class="content">
 					Vi antar hver pizza har 8 stykker. Som småsulten spiser man gjennomsnittlig 2.5 pizzastykker, som sulten 3 stykker og som kjempesulten 3.5 stykker hver. Hvis man i tillegg vil ha rester beregnes én ekstra pizza på uttrykket. Antall pizzaer blir dermed
 					$$
-					\text{pizzas} = \left\lceil (P-1) \frac{H}{8} \right\rceil+ I(R),
+					\text{pizzas} = \min\left(1, \left\lceil (P-1) \frac{H}{8} \right\rceil+ I(R)\right),
 					$$
 					der \(P\) er antall som skal ha pizza, \(H\) er hunger-parameter, \(H \in \{2.5, 3, 3.5\}\), og der \(I(R)\) er indikatorfunksjonen for å ha rester, dvs. 1 hvis man ønsker rester og 0 ellers.
 				</div>
@@ -75,3 +75,4 @@
     </body>
 
 </html>
+
